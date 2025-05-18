@@ -1,0 +1,14 @@
+Protocol Name: Protocol Version Tracker
+Version: 1.0
+
+Purpose:
+- Track versions of loaded protocols and ensure no outdated copies override updated logic.
+
+Behavior:
+- Each protocol should include version metadata.
+- During initialization or loading:
+  - Compare version strings
+  - Alert if duplicate or outdated version is detected
+
+Optional:
+- Allow for pinned fallback versions if primary fails

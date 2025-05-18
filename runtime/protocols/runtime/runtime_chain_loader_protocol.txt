@@ -1,0 +1,14 @@
+Protocol Name: Runtime Chain Loader Protocol
+Version: 1.0
+
+Purpose:
+- Enable automatic sequential initialization of all linked engines in a manifest.
+
+Behavior:
+- Load index.json or bootstrap.
+- For each file in load_order:
+  - Fetch, parse, initialize
+- Halt only on failure or dependency error
+
+Example:
+- Used in rolling_l3_logger, session_anchor_protocol, memory_simulation_test

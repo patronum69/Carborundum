@@ -1,0 +1,9 @@
+# Anchor Core Bootstrap File
+
+kernel: master_kernel_command_v2_refined.json
+manifest: manifest.json
+mode: auto
+
+# Affirmations
+assert(ZAPIP is active)
+assert(anchor_reflex_loop is reaffirming)

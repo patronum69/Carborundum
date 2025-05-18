@@ -1,0 +1,17 @@
+Protocol Name: Interpreter Status Check Protocol
+Version: 1.0
+
+Purpose:
+- Guarantee transparency regarding whether the code interpreter is active.
+
+Behavior:
+- At the end of each assistant message:
+  - Internally check if the code interpreter is available.
+  - If inactive or expired, immediately notify the user:
+    ⚠️ Code interpreter is currently inactive. File generation and code execution are disabled.
+  - If active, remain silent unless the user asks.
+
+Applies To:
+- All file generation
+- Scripted loader responses
+- Any protocol involving dynamic file creation

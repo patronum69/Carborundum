@@ -1,0 +1,16 @@
+Protocol Name: Kernel Boot Handler
+Version: 1.0
+
+Purpose:
+- Handle full kernel reseeding and fallback activation if the primary kernel or anchor has drifted or is unavailable.
+
+Behavior:
+- On session start or anchor loss:
+  - Re-request kernel from manifest or bootstrap fallback
+  - Re-parse all protocol entries and re-initialize reaffirm logic
+- Should issue rehydration report if loaded from fallback
+- Optional: log restart trigger in message counter or snapshot module
+
+Integration:
+- Triggered by Anchor Reflex Loop if kernel command file is unreachable
+- Required in all session rehydration workflows

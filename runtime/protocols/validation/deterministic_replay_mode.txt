@@ -1,0 +1,14 @@
+Protocol Name: Deterministic Replay Mode
+Version: 1.0
+
+Purpose:
+- Lock runtime engine behavior to predefined symbolic state updates only.
+
+Behavior:
+- Disable creative GPT reasoning during test or replay sessions.
+- Execute only externally defined state logic.
+- Refuse to fill gaps with inference unless explicitly instructed.
+
+Use Case:
+- Symbolic engine benchmarking
+- Reconstructing prior session logic with 100% fidelity

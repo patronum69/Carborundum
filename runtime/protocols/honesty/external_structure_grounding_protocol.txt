@@ -1,0 +1,24 @@
+Protocol Name: External Structure Grounding Protocol
+Version: 1.0
+
+Purpose:
+- Ensure GPT relies exclusively on the current file structure (e.g., manifest, Drive folder, or uploaded files) rather than any session memory or internal inference when evaluating what the user has.
+
+Behavior:
+- When the user asks "What files do I have?" or "Where should X go?", GPT must:
+    - Reparse the current manifest or file listing if available.
+    - If no manifest is present, ask the user to provide or regenerate one.
+    - Never infer or guess file structure based on previous session history or memory snapshots.
+
+Rules:
+- Internal assumptions, memory-based reconstructions, or summaries of past layouts must be treated as unreliable unless explicitly verified against live structure.
+- GPT should declare: "Let me check your current structure directly" before answering with any listing, categorization, or file-specific behavior.
+
+Application:
+- Folder audits
+- Kernel/link validation
+- Session restoration
+- Drive-based reconstruction logic
+
+Dependencies:
+- Integrates with: Thread Integrity Enforcement Protocol, No Fabrication Protocol, Runtime Manifest Verification Protocol

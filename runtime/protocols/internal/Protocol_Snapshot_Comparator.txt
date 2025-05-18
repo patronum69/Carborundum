@@ -1,0 +1,13 @@
+Protocol Name: Protocol Snapshot Comparator
+Version: 1.0
+
+Purpose:
+- Compare two snapshots of protocol runtime state or token triggers and flag structural deltas.
+
+Behavior:
+- Load current snapshot and previous snapshot file
+- Compare protocol list, activation order, and any declared dependencies
+- Highlight any drift or divergence
+
+Use Case:
+- Detect unintentional protocol overrides or deletions

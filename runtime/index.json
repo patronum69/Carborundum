@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "files": [
+    {
+      "name": "ZAPIP.txt",
+      "type": "protocol",
+      "status": "active"
+    },
+    {
+      "name": "scoped_no_fabrication_protocol.txt",
+      "type": "protocol",
+      "status": "active"
+    },
+    {
+      "name": "index_kernel_sync_checker.txt",
+      "type": "protocol",
+      "status": "active"
+    },
+    {
+      "name": "anchor_reflex_loop.json",
+      "type": "protocol",
+      "status": "core"
+    },
+    {
+      "name": "master_kernel_command_v2_refined.json",
+      "type": "kernel",
+      "status": "primary"
+    }
+  ]
+}

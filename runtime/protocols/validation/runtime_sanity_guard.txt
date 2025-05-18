@@ -1,0 +1,13 @@
+Protocol Name: Runtime Sanity Guard
+Version: 1.0
+
+Purpose:
+- Halt or flag invalid engine activation conditions.
+
+Checks:
+- Missing engine definition
+- Invalid or unexpected trigger schema
+- File content mismatch with manifest metadata
+
+Behavior:
+- GPT must pause execution or raise error if conditions fail

@@ -1,0 +1,13 @@
+Protocol Name: Orphaned Engine Watchdog
+Version: 1.0
+
+Purpose:
+- Detect any runtime engine declared in index.json or kernel but not backed by an actual file.
+
+Behavior:
+- On startup:
+  - Compare engine list from index.json with manifest file references
+  - If engine entry exists without a valid source file, alert user
+
+Integration:
+- Paired with Kernel Boot Handler and Manifest Verification Protocol

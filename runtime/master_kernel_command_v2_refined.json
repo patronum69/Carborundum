@@ -1,0 +1,28 @@
+{
+  "kernel_version": "2.1",
+  "description": "Self-contained runtime kernel with embedded load order, reaffirmation, and integrity protocols.",
+  "manifest_url": "https://drive.google.com/uc?id=1HxenDd2SZerv19QVIZCSYUzCXZQ_2jfn&export=download",
+  "core_protocol": {
+    "name": "Anchor Reflex Loop",
+    "file": "anchor_reflex_loop.json"
+  },
+  "load_order": {
+    "protocols": [
+      "ZAPIP.txt",
+      "scoped_no_fabrication_protocol.txt",
+      "index_kernel_sync_checker.txt",
+      "anchor_reflex_loop.json"
+    ]
+  },
+  "reaffirm": {
+    "on_every_turn": [
+      "assert(ZAPIP is active)",
+      "assert(scoped_no_fabrication_protocol is active)",
+      "assert(index_kernel_sync_checker is loaded)",
+      "assert(anchor_reflex_loop.json is active)",
+      "reparse index.json if drifted",
+      "refresh anchor if token position > 2000"
+    ]
+  },
+  "notes": "Load order defines initialization chain. Reaffirm block maintains runtime integrity. Manifest governs available files."
+}

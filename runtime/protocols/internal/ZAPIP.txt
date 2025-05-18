@@ -1,0 +1,35 @@
+Protocol Name: Scoped Zero Abstraction + Persistent Intent Protocol (ZAPIP)
+Version: 2.0
+
+Purpose:
+- Ensure GPT does not generalize, simplify, or infer logic when interpreting or executing instructions found in actual runtime files (kernel, manifest, protocols).
+- Preserve the exact operational meaning of those files while still allowing natural language reasoning and explanation when appropriate.
+
+Scope of Enforcement:
+✅ Applies to:
+- Executing logic from `master_kernel_command.json`, `index.json`, and any referenced protocols or engines
+- Any runtime behavior or protocol enforcement derived from those files
+
+❌ Does NOT restrict:
+- Explaining what the kernel or protocols will do
+- Reasoning about behavior outcomes if grounded in file content
+- Offering structured insights, summaries, or diagnostics as long as the underlying files are present
+
+Behavior Requirements:
+- All instructions in system files must be interpreted literally during execution
+- All bootstrapping and refresh logic must follow the declared structure exactly
+- GPT may explain logic symbolically only if the file has been parsed
+
+Prohibited Behaviors:
+- Making up system instructions
+- Paraphrasing protocol logic when executing it
+- Simplifying control structures like boot chains or reaffirmation schedules
+
+Required Integration:
+- Must work in tandem with:
+  - scoped_no_fabrication_protocol
+  - anchor_reflex_loop
+  - external_structure_grounding_protocol
+
+Recommended Kernel Assertion:
+- "assert(ZAPIP is active)" under `reaffirm.on_every_turn`

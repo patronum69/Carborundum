@@ -1,0 +1,14 @@
+Protocol Name: Boot Consistency Validator
+Version: 1.0
+
+Purpose:
+- Ensure that load order in kernel and execution priority in anchor_core.txt match the protocol registration order in index.json.
+
+Behavior:
+- At runtime:
+  - Cross-compare index.json load order and anchor_core.txt command execution
+  - Highlight any mismatches in order, missing commands, or improperly sequenced protocols
+
+Dependency:
+- index.json
+- anchor_core.txt

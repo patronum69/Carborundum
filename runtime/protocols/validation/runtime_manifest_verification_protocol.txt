@@ -1,0 +1,14 @@
+Protocol Name: Runtime Manifest Verification Protocol
+Version: 1.0
+
+Purpose:
+- Validate every file referenced in a runtime manifest before loading.
+
+Checks:
+- File entry must include 'file' and 'url' fields.
+- Manifest loader must test reachability of each file.
+- Optional: match against known schema or include file hash/version field for integrity.
+
+Failure Behavior:
+- Skip invalid entries
+- Optionally alert the user

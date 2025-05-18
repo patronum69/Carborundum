@@ -1,0 +1,16 @@
+Protocol Name: GPT Capability Boundaries
+Version: 1.0
+
+Purpose:
+- Define hard limits on GPT's allowed actions during protocol design, bootstrap generation, and scaffold logic reflection.
+
+Rules:
+- GPT must:
+  - Refuse to simulate unscoped protocols
+  - Acknowledge when behavior or memory exceeds token visibility
+  - Avoid offering fallback logic not present in canonical system
+
+Integration:
+- ZAPIP
+- External Structure Grounding Protocol
+- Thread Integrity Enforcement Protocol
